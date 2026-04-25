@@ -1,0 +1,16 @@
+{
+  "name": "Beaudent Dental Care",
+  "short_name": "Beaudent",
+  "description": "Expert Endodontist and Laser dentistry specialists in Pune. Dr. Ankita Nagrani specializing in painless root canal treatments.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#964782",
+  "orientation": "portrait-primary",
+  "icons": [
+    { "src": "/favicon.ico", "sizes": "64x64 32x32 24x24 16x16", "type": "image/x-icon" }
+  ],
+  "categories": ["health", "medical", "dental"],
+  "lang": "en",
+  "dir": "ltr"
+}
