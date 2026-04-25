@@ -1,103 +1,150 @@
+'use client';
+
 import Image from "next/image";
+import { Phone, Mail, MapPin, Clock, Globe, ShieldCheck } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#301b2a] border-t border-white/5 pt-8 pb-4 text-gray-300">
+    <footer className="bg-[#061B2E] border-t border-white/5 pt-12 pb-6 text-slate-300">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <div className="text-center mb-8">
-          <div className="bg-white p-3 md:p-4 rounded-xl inline-block mb-4 shadow-xl">
+        <div className="text-center mb-12">
+          <div className="bg-white p-3 md:p-4 rounded-2xl inline-block mb-5 shadow-2xl">
             <Image
               src="/images/logo.svg"
-              alt="Beaudent Dental Care"
+              alt="Isha-Para Clinic"
               width={160}
               height={60}
-              className="h-10 md:h-14 w-auto opacity-100"
+              className="h-10 md:h-14 w-auto"
             />
           </div>
-          <p className="text-gray-400 max-w-2xl mx-auto font-light leading-relaxed text-xs md:text-sm">
-            Beaudent Dental Care: Premium Endodontist and Laser dentistry specialists in Pune.
+          <p className="text-slate-400 max-w-2xl mx-auto font-light leading-relaxed text-sm md:text-base">
+            <span className="text-white font-semibold">Isha-Para Clinic</span> — Advanced laser & laparoscopic surgery in Haridwar, led by Dr. Deepak Kumar with 25+ years of trusted surgical experience.
           </p>
         </div>
-        <div className="grid md:grid-cols-3 gap-6 text-center md:text-left mb-8">
-          <div className="space-y-2">
-            <h3 className="font-bold text-white text-base border-b border-gray-800 pb-1">Contact Us</h3>
-            <div className="space-y-1 mt-2">
-              <a href="tel:+918788305936" className="block text-[#964782] font-bold text-lg hover:scale-105 transition-transform inline-block">+91 87883 05936</a>
 
-              <p className="text-gray-300 font-medium text-xs">Beaudent Dental Care</p>
-              <a href="mailto:drankitanagrani@gmail.com" className="text-xs hover:text-[#964782] transition-colors block">drankitanagrani@gmail.com</a>
+        <div className="grid md:grid-cols-3 gap-8 text-center md:text-left mb-12">
+          {/* Contact */}
+          <div className="space-y-3">
+            <h3 className="font-bold text-white text-base border-b border-white/10 pb-2 flex items-center gap-2 justify-center md:justify-start">
+              <Phone className="w-4 h-4 text-[#C9A961]" /> Contact Us
+            </h3>
+            <div className="space-y-2 mt-3">
+              <a href="tel:+919756788082" className="block text-[#C9A961] font-bold text-lg hover:text-[#E6CF94] transition-colors">
+                +91 97567 88082
+              </a>
+              <a href="tel:+919456190901" className="block text-slate-300 font-medium text-sm hover:text-[#C9A961] transition-colors">
+                +91 94561 90901
+              </a>
+              <a href="tel:+918445453909" className="block text-slate-400 text-xs hover:text-[#C9A961] transition-colors">
+                Patient Helpline · +91 84454 53909
+              </a>
+              <a
+                href="mailto:myfamilydentists@gmail.com"
+                className="text-xs hover:text-[#C9A961] transition-colors block flex items-center gap-1.5 justify-center md:justify-start mt-2"
+              >
+                <Mail className="w-3 h-3" />
+                myfamilydentists@gmail.com
+              </a>
             </div>
           </div>
 
-          <div className="space-y-2">
-            <h3 className="font-bold text-white text-base border-b border-gray-800 pb-1">Clinic Hours</h3>
-            <div className="flex items-start justify-center md:justify-start gap-2 mt-2">
-              <span className="text-[#964782] text-lg">🕒</span>
-              <div className="text-gray-300 space-y-0.5 text-xs">
-                <p className="font-bold text-[#964782]">Monday to Saturday</p>
-                <p>10:00 AM – 8:00 PM</p>
-                <p className="font-bold mt-1">Sunday</p>
-                <p>Closed</p>
+          {/* Hours */}
+          <div className="space-y-3">
+            <h3 className="font-bold text-white text-base border-b border-white/10 pb-2 flex items-center gap-2 justify-center md:justify-start">
+              <Clock className="w-4 h-4 text-[#C9A961]" /> Clinic Hours
+            </h3>
+            <div className="text-slate-300 space-y-2 text-sm mt-3">
+              <div>
+                <p className="font-bold text-[#C9A961] text-xs uppercase tracking-wider">Monday – Saturday</p>
+                <p className="font-medium">9:00 AM – 10:30 AM</p>
+                <p className="font-medium">7:00 PM – 10:30 PM</p>
+              </div>
+              <div className="pt-1">
+                <p className="font-bold text-[#C9A961] text-xs uppercase tracking-wider">Sunday</p>
+                <p className="font-medium">10:00 AM – 2:00 PM</p>
               </div>
             </div>
           </div>
 
-          <div className="space-y-2">
-            <h3 className="font-bold text-white text-base border-b border-gray-800 pb-1">Our Location</h3>
+          {/* Address */}
+          <div className="space-y-3">
+            <h3 className="font-bold text-white text-base border-b border-white/10 pb-2 flex items-center gap-2 justify-center md:justify-start">
+              <MapPin className="w-4 h-4 text-[#C9A961]" /> Our Location
+            </h3>
             <a
-              href="https://maps.app.goo.gl/GmaTNebnQKJXhK4k7"
+              href="https://maps.google.com/?q=Isha-Para+Clinic+Near+BSNL+Office+Chowraha+Haridwar"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-white transition-all group block text-xs mt-2"
+              className="hover:text-white transition-all group block text-sm mt-3"
             >
-              <div className="flex items-start justify-center md:justify-start gap-2">
-                <span className="text-xl">📍</span>
-                <span className="text-gray-300 leading-relaxed group-hover:text-[#964782] transition-colors">
-                  F-18, First Floor, ABIL Imperial Commercial Spaces,<br />
-                  Rohan Seher Lane, Pancard Club Road,<br />
-                  Baner, Pune, Maharashtra – 411045<br />
-                  <span className="text-[10px] text-gray-400 mt-1 block">(Above Durga Cafe / 2M Medico / Jio Life Chemist)</span>
-                </span>
-              </div>
+              <span className="text-slate-300 leading-relaxed group-hover:text-[#C9A961] transition-colors block">
+                D-21, Isha-Para Clinic,
+                <br />
+                Near BSNL Office Chowraha,
+                <br />
+                Haridwar, Uttarakhand
+              </span>
+            </a>
+            <a
+              href="https://id.vyaparify.com/drdeepak-kumar-general-surgeon"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-slate-400 hover:text-[#C9A961] transition-colors flex items-center gap-1.5 justify-center md:justify-start mt-3"
+            >
+              <Globe className="w-3 h-3" />
+              View Online Profile
             </a>
           </div>
         </div>
 
-        {/* Payment Methods and Maps Embed */}
-        <div className="grid md:grid-cols-2 gap-4 items-start">
-          <div className="bg-gray-50 p-4 rounded-xl border border-gray-100">
-            <h3 className="font-bold text-gray-900 mb-2 text-sm border-b border-gray-100 pb-1">Payment &amp; Billing</h3>
-            <ul className="grid grid-cols-2 gap-2 mt-2">
+        {/* Trust + Map */}
+        <div className="grid md:grid-cols-2 gap-6 items-stretch">
+          <div className="bg-white/[0.04] p-6 rounded-2xl border border-white/10 backdrop-blur-sm">
+            <h3 className="font-bold text-white mb-3 text-sm border-b border-white/10 pb-2 flex items-center gap-2">
+              <ShieldCheck className="w-4 h-4 text-[#C9A961]" /> Insurance &amp; Payment
+            </h3>
+            <ul className="grid grid-cols-2 gap-2 mt-3">
               {[
-                { name: "UPI / GPay", icon: "📱" },
-                { name: "Cash", icon: "💵" },
-                { name: "EMI for Invisalign", icon: "🏦" }
-              ].map((method, idx) => (
-                <li key={idx} className="flex items-center gap-1.5 text-gray-600 text-[11px] sm:text-xs">
-                  <span>{method.icon}</span>
-                  {method.name}
+                "All TPA Networks",
+                "Cashless Treatment",
+                "EMI Options Available",
+                "UPI · Card · Cash",
+                "Health Insurance Claims",
+                "Pre-auth Support",
+              ].map((method) => (
+                <li
+                  key={method}
+                  className="flex items-center gap-2 text-slate-300 text-xs"
+                >
+                  <span className="w-1 h-1 rounded-full bg-[#C9A961]" />
+                  {method}
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="bg-gray-100 rounded-xl overflow-hidden h-[160px] shadow-inner border border-gray-200">
+          <div className="bg-white/[0.04] rounded-2xl overflow-hidden h-[200px] shadow-inner border border-white/10">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.3932723318726!2d73.7730753!3d18.556300399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bfe4ce6a472b%3A0xc67a4e2abe2628f7!2sBeaudent%20%7C%20Dentist%20in%20Baner%20%7C%20Dental%20Clinic%20in%20Baner!5e0!3m2!1sen!2sin!4v1774363584671!5m2!1sen!2sin"
+              src="https://www.google.com/maps?q=Near+BSNL+Office+Chowraha+Haridwar&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen={true}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Tooth Story - Ahmedabad"
+              title="Isha-Para Clinic — Haridwar"
               className="grayscale hover:grayscale-0 transition-all duration-700"
             ></iframe>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-4 text-center text-gray-500 text-[10px] sm:text-xs">
-          <p>&copy; {new Date().getFullYear()} Beaudent Dental Care. All rights reserved.</p>
+        <div className="border-t border-white/10 mt-10 pt-6 text-center text-slate-500 text-[11px] sm:text-xs">
+          <p>
+            &copy; {new Date().getFullYear()} <span className="text-slate-300 font-semibold">Isha-Para Clinic</span> · Dr. Deepak Kumar. All rights reserved.
+          </p>
+          <p className="mt-1 text-slate-600">
+            Information on this site is for educational purposes only and does not replace medical advice.
+          </p>
         </div>
       </div>
     </footer>

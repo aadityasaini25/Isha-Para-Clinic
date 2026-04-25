@@ -17,94 +17,64 @@ import StickyCTA from "@/components/StickyCTA";
 import PopupForm from "@/components/PopupForm";
 import BackgroundGraphics from "@/components/BackgroundGraphics";
 
+// ── Tunables ──────────────────────────────────────────────────────────
+const STICKY_CTA_THRESHOLD = 300;            // px scrolled before sticky CTA appears
+const POPUP_DELAY_MS = 12_000;               // delay before booking popup auto-opens
+
 export default function Home() {
   const [showStickyCta, setShowStickyCta] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
-  const [remainingSeconds, setRemainingSeconds] = useState(19 * 60 + 49);
 
-  const minutes = Math.floor(remainingSeconds / 60);
-  const seconds = remainingSeconds % 60;
-
-  // Countdown timer effect
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setRemainingSeconds((prev) => {
-        if (prev > 0) {
-          return prev - 1;
-        }
-        return 19 * 60 + 49;
-      });
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, []);
-
-  // Scroll handler for sticky CTA
+  // Sticky CTA appears once user scrolls past threshold.
   useEffect(() => {
     const handleScroll = () => {
-      setShowStickyCta(window.scrollY > 300);
+      setShowStickyCta(window.scrollY > STICKY_CTA_THRESHOLD);
     };
-
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Show popup after a longer delay so it feels less intrusive
+  // Booking popup auto-opens after a delay so visitors can engage with the page first.
   useEffect(() => {
-    const timer = setTimeout(() => setShowPopup(true), 12000);
+    const timer = setTimeout(() => setShowPopup(true), POPUP_DELAY_MS);
     return () => clearTimeout(timer);
   }, []);
 
-  // Lock body scroll when popup is open
+  // Lock body scroll while modal is open.
   useEffect(() => {
-    if (!showPopup) {
-      return;
-    }
-
+    if (!showPopup) return;
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
-
     return () => {
       document.body.style.overflow = previousOverflow;
     };
   }, [showPopup]);
-  // Section visibility observer
+
+  // Reveal sections on scroll via IntersectionObserver (paired with .fade-up CSS).
   useEffect(() => {
-    const observerOptions = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.05,
-    };
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { root: null, rootMargin: '0px', threshold: 0.05 }
+    );
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('section, .fade-up').forEach((el) => {
-      observer.observe(el);
-    });
-
+    document.querySelectorAll('section, .fade-up').forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, []);
 
-  const openPopup = () => {
-    setShowPopup(true);
-  };
-
-  const closePopup = () => {
-    setShowPopup(false);
-  };
+  const openPopup = () => setShowPopup(true);
+  const closePopup = () => setShowPopup(false);
 
   return (
-    <div className="bg-medical-light min-h-screen">
+    <div className="bg-mist min-h-screen">
       <BackgroundGraphics />
 
-      {/* Main Content */}
       <div className="relative z-10">
         <Header onBookAppointment={openPopup} />
         <HeroSection onBookAppointment={openPopup} />
@@ -119,14 +89,8 @@ export default function Home() {
         <Footer />
       </div>
 
-      {/* Interactive Components */}
       <StickyCTA isVisible={showStickyCta} onBookAppointment={openPopup} />
-      <PopupForm
-        isOpen={showPopup}
-        onClose={closePopup}
-        minutes={minutes}
-        seconds={seconds}
-      />
+      <PopupForm isOpen={showPopup} onClose={closePopup} />
     </div>
   );
 }
