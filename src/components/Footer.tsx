@@ -10,11 +10,11 @@ export default function Footer() {
         <div className="text-center mb-12">
           <div className="bg-white p-3 md:p-4 rounded-2xl inline-block mb-5 shadow-2xl">
             <Image
-              src="/images/logo.svg"
-              alt="Isha-Para Clinic"
-              width={160}
-              height={60}
-              className="h-10 md:h-14 w-auto"
+              src="/images/logo.jpeg"
+              alt="Isha-Para Clinics"
+              width={1545}
+              height={105}
+              className="h-3 md:h-4 w-auto"
             />
           </div>
           <p className="text-slate-400 max-w-2xl mx-auto font-light leading-relaxed text-sm md:text-base">
@@ -72,7 +72,7 @@ export default function Footer() {
               <MapPin className="w-4 h-4 text-[#C9A961]" /> Our Location
             </h3>
             <a
-              href="https://maps.google.com/?q=Isha-Para+Clinic+Near+BSNL+Office+Chowraha+Haridwar"
+              href="https://www.google.com/maps/place/29%C2%B056'04.1%22N+78%C2%B004'36.9%22E/@29.934484,78.0743291,17z/data=!3m1!4b1!4m4!3m3!8m2!3d29.934484!4d78.076904"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-all group block text-sm mt-3"
@@ -107,7 +107,6 @@ export default function Footer() {
               {[
                 "All TPA Networks",
                 "Cashless Treatment",
-                "EMI Options Available",
                 "UPI · Card · Cash",
                 "Health Insurance Claims",
                 "Pre-auth Support",
@@ -125,7 +124,7 @@ export default function Footer() {
 
           <div className="bg-white/[0.04] rounded-2xl overflow-hidden h-[200px] shadow-inner border border-white/10">
             <iframe
-              src="https://www.google.com/maps?q=Near+BSNL+Office+Chowraha+Haridwar&output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55321.11576776408!2d78.00142554023813!3d29.934286743132528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390949523d6340cb%3A0x4f91a9e0a78ce43f!2sMy%20Family%20Dentist%20%2F%20Isha%20Para%20Clinic%20-%20Best%20Dental%20Clinic%20%7C%20Implant%20Center%20in%20Haridwar!5e0!3m2!1sen!2sin!4v1778312832125!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}

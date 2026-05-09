@@ -15,7 +15,6 @@ export default function OfferSection({ onBookAppointment }: OfferSectionProps) {
     "100% cashless surgery for covered procedures",
     "Pre-authorization handled by our team",
     "Complete claim documentation support",
-    "EMI options for non-insured patients",
     "Transparent pricing — no hidden costs",
     "Same-day discharge for most laser cases",
   ];

@@ -81,7 +81,6 @@ const serviceData = [
       "Pre-authorization assistance",
       "All major TPAs supported",
       "Full claim documentation help",
-      "EMI options also available",
     ],
     accent: "from-[#C9A961] to-[#E6CF94]",
     isGold: true,
@@ -172,7 +171,7 @@ export default function ServiceHighlights() {
             Treatment plans starting from <span className="text-gradient-gold">₹45,000</span>
           </p>
           <p className="text-slate-400 text-sm font-light">
-            Final pricing is finalized only after consultation. EMI & insurance options available on every procedure.
+            Final pricing is finalized only after consultation. Insurance options available on every procedure.
           </p>
         </div>
       </div>

@@ -28,11 +28,11 @@ export default function Header({ onBookAppointment }: HeaderProps) {
         <div className="flex items-center gap-4 md:gap-8">
           <div className="bg-white p-2 rounded-xl shadow-lg border border-slate-100">
             <Image
-              src="/images/logo.svg"
-              alt="Isha-Para Clinic"
-              width={160}
-              height={60}
-              className="h-10 md:h-14 w-auto"
+              src="/images/logo.jpeg"
+              alt="Isha-Para Clinics"
+              width={1545}
+              height={105}
+              className="h-2 md:h-3 w-auto"
               priority
             />
           </div>
@@ -41,7 +41,7 @@ export default function Header({ onBookAppointment }: HeaderProps) {
               <MapPin className="w-3 h-3" /> Location
             </p>
             <a
-              href="https://maps.google.com/?q=Isha-Para+Clinic+Near+BSNL+Office+Chowraha+Haridwar"
+              href="https://www.google.com/maps/place/29%C2%B056'04.1%22N+78%C2%B004'36.9%22E/@29.934484,78.0743291,17z/data=!3m1!4b1!4m4!3m3!8m2!3d29.934484!4d78.076904"
               target="_blank"
               rel="noopener noreferrer"
               className="block text-[11px] leading-tight font-semibold text-slate-700 max-w-[280px] hover:text-[#0E7C7B] transition-colors"
