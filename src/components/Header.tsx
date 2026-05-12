@@ -44,7 +44,7 @@ export default function Header({ onBookAppointment }: HeaderProps) {
               href="https://www.google.com/maps/place/29%C2%B056'04.1%22N+78%C2%B004'36.9%22E/@29.934484,78.0743291,17z/data=!3m1!4b1!4m4!3m3!8m2!3d29.934484!4d78.076904"
               target="_blank"
               rel="noopener noreferrer"
-              className="block text-[11px] leading-tight font-semibold text-slate-700 max-w-[280px] hover:text-[#0E7C7B] transition-colors"
+              className="block text-[11px] leading-tight font-semibold text-slate-700 max-w-[280px] hover:text-[#C8226E] transition-colors"
             >
               D-21, Isha-Para Clinic,<br />
               Near BSNL Office Chowraha, Haridwar
@@ -58,14 +58,14 @@ export default function Header({ onBookAppointment }: HeaderProps) {
             <div className="flex flex-col">
               <a
                 href="tel:+919756788082"
-                className="text-sm font-bold text-[#0A2540] hover:text-[#0E7C7B] transition-colors flex items-center justify-end gap-1.5"
+                className="text-sm font-bold text-[#2A0F22] hover:text-[#C8226E] transition-colors flex items-center justify-end gap-1.5"
               >
                 <Phone className="w-3.5 h-3.5" />
                 +91 97567 88082
               </a>
               <a
                 href="mailto:myfamilydentists@gmail.com"
-                className="text-[11px] font-medium text-slate-600 hover:text-[#0E7C7B] transition-colors"
+                className="text-[11px] font-medium text-slate-600 hover:text-[#C8226E] transition-colors"
               >
                 myfamilydentists@gmail.com
               </a>
@@ -73,7 +73,7 @@ export default function Header({ onBookAppointment }: HeaderProps) {
           </div>
           <button
             onClick={onBookAppointment}
-            className="bg-[#0E7C7B] text-white px-6 py-2.5 rounded-full font-bold text-xs uppercase tracking-wider hover:bg-[#0B5F5E] hover:shadow-[0_10px_30px_-8px_rgba(14,124,123,0.6)] hover:-translate-y-0.5 transition-all shadow-md"
+            className="bg-[#C8226E] text-white px-6 py-2.5 rounded-full font-bold text-xs uppercase tracking-wider hover:bg-[#9E1A56] hover:shadow-[0_10px_30px_-8px_rgba(200,34,110,0.6)] hover:-translate-y-0.5 transition-all shadow-md"
           >
             Book Consultation
           </button>

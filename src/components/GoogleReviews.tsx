@@ -53,7 +53,7 @@ export default function GoogleReviews() {
             What Our <span className="text-gradient-teal">Patients Say</span>
           </h2>
         </div>
-        <div className="w-16 h-0.5 bg-[#C9A961] rounded-full mb-4" />
+        <div className="w-16 h-0.5 bg-[#D4A95A] rounded-full mb-4" />
         <p className="text-slate-600 max-w-2xl mb-14 font-light text-base md:text-lg">
           Real outcomes, in our patients' own words.
         </p>
@@ -66,10 +66,10 @@ export default function GoogleReviews() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5, delay: index * 0.08 }}
-              className="bg-white p-7 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 hover:border-[#0E7C7B]/30 hover:-translate-y-1 flex flex-col h-full"
+              className="bg-white p-7 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 hover:border-[#C8226E]/30 hover:-translate-y-1 flex flex-col h-full"
             >
               <div className="flex items-start gap-4 mb-5">
-                <div className="w-12 h-12 text-white rounded-full flex items-center justify-center font-bold text-lg bg-gradient-to-br from-[#0E7C7B] to-[#0A2540] shadow-md shrink-0">
+                <div className="w-12 h-12 text-white rounded-full flex items-center justify-center font-bold text-lg bg-gradient-to-br from-[#C8226E] to-[#2A0F22] shadow-md shrink-0">
                   {review.initials}
                 </div>
                 <div>
@@ -77,7 +77,7 @@ export default function GoogleReviews() {
                   <p className="text-sm text-slate-500 mt-1">{review.date}</p>
                 </div>
               </div>
-              <div className="flex text-[#C9A961] mb-4 gap-0.5">
+              <div className="flex text-[#D4A95A] mb-4 gap-0.5">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-current" />
                 ))}

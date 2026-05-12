@@ -80,7 +80,7 @@ export default function PopupForm({ isOpen, onClose }: PopupFormProps) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.25 }}
-          className="fixed inset-0 bg-[#061B2E]/70 backdrop-blur-sm flex items-center justify-center z-[100] p-4"
+          className="fixed inset-0 bg-[#170818]/70 backdrop-blur-sm flex items-center justify-center z-[100] p-4"
           onClick={onClose}
           role="dialog"
           aria-modal="true"
@@ -96,7 +96,7 @@ export default function PopupForm({ isOpen, onClose }: PopupFormProps) {
           >
             <button
               onClick={onClose}
-              className="absolute top-5 right-5 w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-[#0E7C7B] hover:text-white transition-all duration-300 z-10"
+              className="absolute top-5 right-5 w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-[#C8226E] hover:text-white transition-all duration-300 z-10"
               aria-label="Close booking form"
             >
               <X className="w-5 h-5" />
@@ -126,8 +126,8 @@ export default function PopupForm({ isOpen, onClose }: PopupFormProps) {
                       onClick={() => setTreatmentType(opt)}
                       className={`text-left text-xs md:text-sm font-semibold px-4 py-3 rounded-xl border transition-all ${
                         treatmentType === opt
-                          ? 'bg-[#0A2540] text-white border-[#0A2540] shadow-md'
-                          : 'bg-white text-slate-700 border-slate-200 hover:border-[#0E7C7B] hover:text-[#0E7C7B]'
+                          ? 'bg-[#2A0F22] text-white border-[#2A0F22] shadow-md'
+                          : 'bg-white text-slate-700 border-slate-200 hover:border-[#C8226E] hover:text-[#C8226E]'
                       }`}
                     >
                       {opt}
@@ -144,7 +144,7 @@ export default function PopupForm({ isOpen, onClose }: PopupFormProps) {
                     name="fullName"
                     required
                     placeholder="Full Name"
-                    className="w-full px-5 py-4 rounded-2xl border border-slate-200 bg-slate-50 outline-none focus:border-[#0E7C7B] focus:bg-white focus:ring-4 focus:ring-[#0E7C7B]/15 transition-all text-slate-800 font-medium placeholder:text-slate-400"
+                    className="w-full px-5 py-4 rounded-2xl border border-slate-200 bg-slate-50 outline-none focus:border-[#C8226E] focus:bg-white focus:ring-4 focus:ring-[#C8226E]/15 transition-all text-slate-800 font-medium placeholder:text-slate-400"
                   />
                   <input
                     type="tel"
@@ -152,7 +152,7 @@ export default function PopupForm({ isOpen, onClose }: PopupFormProps) {
                     required
                     pattern="[0-9+\s-]{10,15}"
                     placeholder="Phone Number"
-                    className="w-full px-5 py-4 rounded-2xl border border-slate-200 bg-slate-50 outline-none focus:border-[#0E7C7B] focus:bg-white focus:ring-4 focus:ring-[#0E7C7B]/15 transition-all text-slate-800 font-medium placeholder:text-slate-400"
+                    className="w-full px-5 py-4 rounded-2xl border border-slate-200 bg-slate-50 outline-none focus:border-[#C8226E] focus:bg-white focus:ring-4 focus:ring-[#C8226E]/15 transition-all text-slate-800 font-medium placeholder:text-slate-400"
                   />
                 </div>
 
@@ -161,7 +161,7 @@ export default function PopupForm({ isOpen, onClose }: PopupFormProps) {
                   name="email"
                   required
                   placeholder="Email Address"
-                  className="w-full px-5 py-4 rounded-2xl border border-slate-200 bg-slate-50 outline-none focus:border-[#0E7C7B] focus:bg-white focus:ring-4 focus:ring-[#0E7C7B]/15 transition-all text-slate-800 font-medium placeholder:text-slate-400"
+                  className="w-full px-5 py-4 rounded-2xl border border-slate-200 bg-slate-50 outline-none focus:border-[#C8226E] focus:bg-white focus:ring-4 focus:ring-[#C8226E]/15 transition-all text-slate-800 font-medium placeholder:text-slate-400"
                 />
 
                 <textarea
@@ -169,13 +169,13 @@ export default function PopupForm({ isOpen, onClose }: PopupFormProps) {
                   required
                   rows={3}
                   placeholder="Briefly describe your symptoms or concern..."
-                  className="w-full px-5 py-4 rounded-2xl border border-slate-200 bg-slate-50 outline-none focus:border-[#0E7C7B] focus:bg-white focus:ring-4 focus:ring-[#0E7C7B]/15 transition-all text-slate-800 font-medium placeholder:text-slate-400 resize-none"
+                  className="w-full px-5 py-4 rounded-2xl border border-slate-200 bg-slate-50 outline-none focus:border-[#C8226E] focus:bg-white focus:ring-4 focus:ring-[#C8226E]/15 transition-all text-slate-800 font-medium placeholder:text-slate-400 resize-none"
                 />
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full group relative overflow-hidden bg-gradient-to-r from-[#0E7C7B] to-[#0A2540] text-white py-5 rounded-2xl font-black text-lg shadow-2xl hover:shadow-[#0E7C7B]/40 active:scale-[0.99] transition-all disabled:opacity-70 disabled:pointer-events-none"
+                  className="w-full group relative overflow-hidden bg-gradient-to-r from-[#C8226E] to-[#2A0F22] text-white py-5 rounded-2xl font-black text-lg shadow-2xl hover:shadow-[#C8226E]/40 active:scale-[0.99] transition-all disabled:opacity-70 disabled:pointer-events-none"
                 >
                   <span className="relative z-10 flex items-center justify-center gap-3">
                     {isSubmitting ? (

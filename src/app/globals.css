@@ -3,25 +3,27 @@
 @tailwind utilities;
 
 /* ──────────────────────────────────────────────────────────────────────
-   Isha-Para Clinic — premium medical design tokens
-   Primary: deep medical teal     Accent: gold
-   Dark surfaces: navy            Light surfaces: clinical mist
+   Isha-Para Clinic — logo-aligned brand tokens
+   Primary: cerise magenta (from logo wordmark)   Accent: champagne gold
+   Dark surfaces: deep plum                       Light surfaces: warm cream
+   NOTE: legacy variable names (--brand-teal, --brand-navy) retained to
+   avoid a project-wide rename; values now carry the magenta-plum palette.
    ────────────────────────────────────────────────────────────────────── */
 @layer base {
   :root {
-    --brand-teal: #0E7C7B;
-    --brand-teal-dark: #0B5F5E;
-    --brand-teal-deep: #083F3F;
-    --brand-navy: #0A2540;
-    --brand-navy-deep: #061B2E;
-    --brand-gold: #C9A961;
-    --brand-gold-light: #E6CF94;
-    --bg-mist: #F4F9F9;
-    --bg-tint: #E6F2F2;
-    --glass-border: rgba(14, 124, 123, 0.18);
+    --brand-teal: #C8226E;
+    --brand-teal-dark: #9E1A56;
+    --brand-teal-deep: #6B0F3A;
+    --brand-navy: #2A0F22;
+    --brand-navy-deep: #170818;
+    --brand-gold: #D4A95A;
+    --brand-gold-light: #EBC97F;
+    --bg-mist: #FAF6EE;
+    --bg-tint: #FBEFF4;
+    --glass-border: rgba(200, 34, 110, 0.18);
     --glass-bg: rgba(255, 255, 255, 0.9);
-    --shadow-premium: 0 20px 50px -12px rgba(10, 37, 64, 0.18);
-    --shadow-premium-hover: 0 30px 60px -12px rgba(14, 124, 123, 0.25);
+    --shadow-premium: 0 20px 50px -12px rgba(42, 15, 34, 0.18);
+    --shadow-premium-hover: 0 30px 60px -12px rgba(200, 34, 110, 0.28);
   }
 
   html {
@@ -62,8 +64,8 @@
   .glass-premium {
     background: rgba(255, 255, 255, 0.78);
     backdrop-filter: blur(16px) saturate(180%);
-    border: 1px solid rgba(14, 124, 123, 0.22);
-    box-shadow: 0 8px 32px 0 rgba(10, 37, 64, 0.1);
+    border: 1px solid rgba(200, 34, 110, 0.22);
+    box-shadow: 0 8px 32px 0 rgba(42, 15, 34, 0.1);
   }
 
   .text-gradient-teal {
@@ -207,13 +209,13 @@
   .glass-header {
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(14, 124, 123, 0.1);
+    border-bottom: 1px solid rgba(200, 34, 110, 0.1);
     transition: all 0.4s ease;
   }
 
   .glass-header.scrolled {
     background: rgba(255, 255, 255, 0.96);
-    box-shadow: 0 4px 20px -5px rgba(10, 37, 64, 0.12);
+    box-shadow: 0 4px 20px -5px rgba(42, 15, 34, 0.12);
   }
 }
 
@@ -231,7 +233,7 @@
   .btn-primary:hover {
     background-color: var(--brand-teal-dark);
     transform: translateY(-2px);
-    box-shadow: 0 12px 30px -10px rgba(14, 124, 123, 0.5);
+    box-shadow: 0 12px 30px -10px rgba(200, 34, 110, 0.5);
   }
 
   .btn-gold {
@@ -242,7 +244,7 @@
 
   .btn-gold:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 30px -10px rgba(201, 169, 97, 0.5);
+    box-shadow: 0 12px 30px -10px rgba(212, 169, 90, 0.5);
   }
 
   .btn-secondary {
@@ -278,8 +280,8 @@
 }
 
 @keyframes pulse-shadow {
-  0%, 100% { box-shadow: 0 0 20px rgba(14, 124, 123, 0.3); }
-  50% { box-shadow: 0 0 40px rgba(14, 124, 123, 0.6); }
+  0%, 100% { box-shadow: 0 0 20px rgba(200, 34, 110, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(200, 34, 110, 0.6); }
 }
 
 @keyframes floating {
@@ -328,7 +330,7 @@ textarea:focus-visible,
 select:focus-visible {
   outline: 2px solid var(--brand-teal);
   outline-offset: 2px;
-  box-shadow: 0 0 0 4px rgba(14, 124, 123, 0.15);
+  box-shadow: 0 0 0 4px rgba(200, 34, 110, 0.15);
 }
 
 /* Scrollbar in brand teal */

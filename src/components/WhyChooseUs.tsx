@@ -28,14 +28,14 @@ const points = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-20 md:py-28 px-4 md:px-8 bg-[#F4F9F9]">
+    <section className="py-20 md:py-28 px-4 md:px-8 bg-[#FAF6EE]">
       <div className="max-w-6xl mx-auto">
         <div className="text-center md:text-left mb-14">
           <p className="section-eyebrow mb-2">Why Isha-Para Clinic</p>
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight mb-4">
             Why Patients <span className="text-gradient-teal">Trust Us</span>
           </h2>
-          <div className="w-16 h-0.5 bg-[#C9A961] rounded-full mx-auto md:mx-0" />
+          <div className="w-16 h-0.5 bg-[#D4A95A] rounded-full mx-auto md:mx-0" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
@@ -46,12 +46,12 @@ export default function WhyChooseUs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-[#0E7C7B]/30 hover:-translate-y-1 transition-all duration-500 group"
+              className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-[#C8226E]/30 hover:-translate-y-1 transition-all duration-500 group"
             >
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#0E7C7B] to-[#0A2540] flex items-center justify-center mb-5 shadow-lg shadow-[#0E7C7B]/20 group-hover:scale-110 transition-transform duration-500">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#C8226E] to-[#2A0F22] flex items-center justify-center mb-5 shadow-lg shadow-[#C8226E]/20 group-hover:scale-110 transition-transform duration-500">
                 <item.icon className="w-7 h-7 text-white" strokeWidth={1.5} />
               </div>
-              <h3 className="font-bold text-xl text-slate-900 mb-3 group-hover:text-[#0E7C7B] transition-colors">
+              <h3 className="font-bold text-xl text-slate-900 mb-3 group-hover:text-[#C8226E] transition-colors">
                 {item.title}
               </h3>
               <p className="text-slate-600 text-[15px] leading-relaxed font-light">{item.desc}</p>

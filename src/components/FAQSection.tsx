@@ -106,13 +106,13 @@ export default function FAQSection({ onBookAppointment }: FAQSectionProps) {
         </div>
 
         {/* Tab switcher */}
-        <div className="flex justify-center mb-12 p-1.5 bg-[#E6F2F2] rounded-2xl max-w-md mx-auto border border-[#0E7C7B]/15">
+        <div className="flex justify-center mb-12 p-1.5 bg-[#FBEFF4] rounded-2xl max-w-md mx-auto border border-[#C8226E]/15">
           <button
             onClick={() => handleCategoryChange('laser')}
             className={`flex-1 py-3 px-6 rounded-xl font-bold text-sm md:text-base transition-all duration-300 ${
               activeCategory === 'laser'
-                ? 'bg-[#0A2540] text-white shadow-lg'
-                : 'text-[#0A2540] hover:bg-white/60'
+                ? 'bg-[#2A0F22] text-white shadow-lg'
+                : 'text-[#2A0F22] hover:bg-white/60'
             }`}
           >
             Laser Treatment
@@ -121,8 +121,8 @@ export default function FAQSection({ onBookAppointment }: FAQSectionProps) {
             onClick={() => handleCategoryChange('laparoscopic')}
             className={`flex-1 py-3 px-6 rounded-xl font-bold text-sm md:text-base transition-all duration-300 ${
               activeCategory === 'laparoscopic'
-                ? 'bg-[#0A2540] text-white shadow-lg'
-                : 'text-[#0A2540] hover:bg-white/60'
+                ? 'bg-[#2A0F22] text-white shadow-lg'
+                : 'text-[#2A0F22] hover:bg-white/60'
             }`}
           >
             Laparoscopy
@@ -135,19 +135,19 @@ export default function FAQSection({ onBookAppointment }: FAQSectionProps) {
             return (
               <div
                 key={faq.question}
-                className="overflow-hidden border border-slate-100 rounded-2xl shadow-sm hover:shadow-md hover:border-[#0E7C7B]/30 transition-all"
+                className="overflow-hidden border border-slate-100 rounded-2xl shadow-sm hover:shadow-md hover:border-[#C8226E]/30 transition-all"
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full p-6 md:p-7 text-left font-bold hover:bg-[#F4F9F9] transition-colors flex justify-between items-center group"
+                  className="w-full p-6 md:p-7 text-left font-bold hover:bg-[#FAF6EE] transition-colors flex justify-between items-center group"
                   aria-expanded={open}
                 >
-                  <span className="flex-grow pr-4 text-base md:text-lg text-slate-800 group-hover:text-[#0A2540] transition-colors">
+                  <span className="flex-grow pr-4 text-base md:text-lg text-slate-800 group-hover:text-[#2A0F22] transition-colors">
                     {faq.question}
                   </span>
                   <span
-                    className={`w-9 h-9 rounded-full border border-[#0E7C7B]/20 flex items-center justify-center text-[#0E7C7B] transform transition-all duration-300 shrink-0 ${
-                      open ? 'rotate-180 bg-[#0E7C7B] text-white border-[#0E7C7B]' : 'group-hover:border-[#0E7C7B]'
+                    className={`w-9 h-9 rounded-full border border-[#C8226E]/20 flex items-center justify-center text-[#C8226E] transform transition-all duration-300 shrink-0 ${
+                      open ? 'rotate-180 bg-[#C8226E] text-white border-[#C8226E]' : 'group-hover:border-[#C8226E]'
                     }`}
                   >
                     <ChevronDown className="w-4 h-4" />
@@ -168,7 +168,7 @@ export default function FAQSection({ onBookAppointment }: FAQSectionProps) {
                         </p>
                         <button
                           onClick={onBookAppointment}
-                          className="inline-flex items-center gap-2 text-[#0E7C7B] font-bold text-base hover:gap-3 transition-all group/btn"
+                          className="inline-flex items-center gap-2 text-[#C8226E] font-bold text-base hover:gap-3 transition-all group/btn"
                         >
                           Book Your Consultation
                           <svg className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">

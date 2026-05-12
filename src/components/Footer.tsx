@@ -5,7 +5,7 @@ import { Phone, Mail, MapPin, Clock, Globe, ShieldCheck } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#061B2E] border-t border-white/5 pt-12 pb-6 text-slate-300">
+    <footer className="bg-[#170818] border-t border-white/5 pt-12 pb-6 text-slate-300">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="text-center mb-12">
           <div className="bg-white p-3 md:p-4 rounded-2xl inline-block mb-5 shadow-2xl">
@@ -26,21 +26,21 @@ export default function Footer() {
           {/* Contact */}
           <div className="space-y-3">
             <h3 className="font-bold text-white text-base border-b border-white/10 pb-2 flex items-center gap-2 justify-center md:justify-start">
-              <Phone className="w-4 h-4 text-[#C9A961]" /> Contact Us
+              <Phone className="w-4 h-4 text-[#D4A95A]" /> Contact Us
             </h3>
             <div className="space-y-2 mt-3">
-              <a href="tel:+919756788082" className="block text-[#C9A961] font-bold text-lg hover:text-[#E6CF94] transition-colors">
+              <a href="tel:+919756788082" className="block text-[#D4A95A] font-bold text-lg hover:text-[#EBC97F] transition-colors">
                 +91 97567 88082
               </a>
-              <a href="tel:+919456190901" className="block text-slate-300 font-medium text-sm hover:text-[#C9A961] transition-colors">
+              <a href="tel:+919456190901" className="block text-slate-300 font-medium text-sm hover:text-[#D4A95A] transition-colors">
                 +91 94561 90901
               </a>
-              <a href="tel:+918445453909" className="block text-slate-400 text-xs hover:text-[#C9A961] transition-colors">
+              <a href="tel:+918445453909" className="block text-slate-400 text-xs hover:text-[#D4A95A] transition-colors">
                 Patient Helpline · +91 84454 53909
               </a>
               <a
                 href="mailto:myfamilydentists@gmail.com"
-                className="text-xs hover:text-[#C9A961] transition-colors block flex items-center gap-1.5 justify-center md:justify-start mt-2"
+                className="text-xs hover:text-[#D4A95A] transition-colors block flex items-center gap-1.5 justify-center md:justify-start mt-2"
               >
                 <Mail className="w-3 h-3" />
                 myfamilydentists@gmail.com
@@ -51,16 +51,16 @@ export default function Footer() {
           {/* Hours */}
           <div className="space-y-3">
             <h3 className="font-bold text-white text-base border-b border-white/10 pb-2 flex items-center gap-2 justify-center md:justify-start">
-              <Clock className="w-4 h-4 text-[#C9A961]" /> Clinic Hours
+              <Clock className="w-4 h-4 text-[#D4A95A]" /> Clinic Hours
             </h3>
             <div className="text-slate-300 space-y-2 text-sm mt-3">
               <div>
-                <p className="font-bold text-[#C9A961] text-xs uppercase tracking-wider">Monday – Saturday</p>
+                <p className="font-bold text-[#D4A95A] text-xs uppercase tracking-wider">Monday – Saturday</p>
                 <p className="font-medium">9:00 AM – 10:30 AM</p>
                 <p className="font-medium">7:00 PM – 10:30 PM</p>
               </div>
               <div className="pt-1">
-                <p className="font-bold text-[#C9A961] text-xs uppercase tracking-wider">Sunday</p>
+                <p className="font-bold text-[#D4A95A] text-xs uppercase tracking-wider">Sunday</p>
                 <p className="font-medium">10:00 AM – 2:00 PM</p>
               </div>
             </div>
@@ -69,7 +69,7 @@ export default function Footer() {
           {/* Address */}
           <div className="space-y-3">
             <h3 className="font-bold text-white text-base border-b border-white/10 pb-2 flex items-center gap-2 justify-center md:justify-start">
-              <MapPin className="w-4 h-4 text-[#C9A961]" /> Our Location
+              <MapPin className="w-4 h-4 text-[#D4A95A]" /> Our Location
             </h3>
             <a
               href="https://www.google.com/maps/place/29%C2%B056'04.1%22N+78%C2%B004'36.9%22E/@29.934484,78.0743291,17z/data=!3m1!4b1!4m4!3m3!8m2!3d29.934484!4d78.076904"
@@ -77,7 +77,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="hover:text-white transition-all group block text-sm mt-3"
             >
-              <span className="text-slate-300 leading-relaxed group-hover:text-[#C9A961] transition-colors block">
+              <span className="text-slate-300 leading-relaxed group-hover:text-[#D4A95A] transition-colors block">
                 D-21, Isha-Para Clinic,
                 <br />
                 Near BSNL Office Chowraha,
@@ -89,7 +89,7 @@ export default function Footer() {
               href="https://id.vyaparify.com/drdeepak-kumar-general-surgeon"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs text-slate-400 hover:text-[#C9A961] transition-colors flex items-center gap-1.5 justify-center md:justify-start mt-3"
+              className="text-xs text-slate-400 hover:text-[#D4A95A] transition-colors flex items-center gap-1.5 justify-center md:justify-start mt-3"
             >
               <Globe className="w-3 h-3" />
               View Online Profile
@@ -101,7 +101,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 gap-6 items-stretch">
           <div className="bg-white/[0.04] p-6 rounded-2xl border border-white/10 backdrop-blur-sm">
             <h3 className="font-bold text-white mb-3 text-sm border-b border-white/10 pb-2 flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-[#C9A961]" /> Insurance &amp; Payment
+              <ShieldCheck className="w-4 h-4 text-[#D4A95A]" /> Insurance &amp; Payment
             </h3>
             <ul className="grid grid-cols-2 gap-2 mt-3">
               {[
@@ -115,7 +115,7 @@ export default function Footer() {
                   key={method}
                   className="flex items-center gap-2 text-slate-300 text-xs"
                 >
-                  <span className="w-1 h-1 rounded-full bg-[#C9A961]" />
+                  <span className="w-1 h-1 rounded-full bg-[#D4A95A]" />
                   {method}
                 </li>
               ))}

@@ -36,7 +36,7 @@ export default function DoctorProfile({ onBookAppointment }: DoctorProfileProps)
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight mb-4">
             A Surgeon You Can <span className="text-gradient-teal">Trust</span>
           </h2>
-          <div className="w-16 h-0.5 bg-[#C9A961] rounded-full mx-auto" />
+          <div className="w-16 h-0.5 bg-[#D4A95A] rounded-full mx-auto" />
           <p className="mt-5 text-slate-600 text-base md:text-lg font-light">
             Decades of refined expertise. Modern surgical technology. Deeply personal care.
           </p>
@@ -54,7 +54,7 @@ export default function DoctorProfile({ onBookAppointment }: DoctorProfileProps)
             >
               <div className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 lg:gap-16 items-center md:items-start`}>
                 <div className="w-full md:w-1/2 lg:w-2/5 flex justify-center">
-                  <div className="relative w-full max-w-sm aspect-[4/5] rounded-[28px] overflow-hidden shadow-2xl border-8 border-white ring-1 ring-slate-100 shimmer-effect bg-gradient-to-br from-[#0E7C7B] to-[#0A2540]">
+                  <div className="relative w-full max-w-sm aspect-[4/5] rounded-[28px] overflow-hidden shadow-2xl border-8 border-white ring-1 ring-slate-100 shimmer-effect bg-gradient-to-br from-[#C8226E] to-[#2A0F22]">
                     <Image
                       src={doctor.image}
                       alt={doctor.name}
@@ -65,7 +65,7 @@ export default function DoctorProfile({ onBookAppointment }: DoctorProfileProps)
                     {/* Credential badge floating bottom-left */}
                     <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-md rounded-2xl px-4 py-2.5 shadow-2xl border border-white/50">
                       <p className="text-[9px] uppercase tracking-widest font-bold text-slate-400">Experience</p>
-                      <p className="text-base font-black text-[#0A2540]">25+ Years</p>
+                      <p className="text-base font-black text-[#2A0F22]">25+ Years</p>
                     </div>
                   </div>
                 </div>
@@ -74,7 +74,7 @@ export default function DoctorProfile({ onBookAppointment }: DoctorProfileProps)
                   <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2 tracking-tight">
                     {doctor.name}
                   </h3>
-                  <p className="text-[#0E7C7B] font-semibold text-sm md:text-base uppercase tracking-[0.2em] mb-6">
+                  <p className="text-[#C8226E] font-semibold text-sm md:text-base uppercase tracking-[0.2em] mb-6">
                     {doctor.title}
                   </p>
                   <div className="text-slate-600 text-base md:text-lg leading-relaxed space-y-5 font-light">
@@ -85,7 +85,7 @@ export default function DoctorProfile({ onBookAppointment }: DoctorProfileProps)
                           key={highlight}
                           className="flex items-start gap-3 justify-center md:justify-start text-slate-700 font-medium"
                         >
-                          <CheckCircle2 className="w-5 h-5 text-[#0E7C7B] mt-0.5 shrink-0" />
+                          <CheckCircle2 className="w-5 h-5 text-[#C8226E] mt-0.5 shrink-0" />
                           <span>{highlight}</span>
                         </li>
                       ))}
@@ -101,7 +101,7 @@ export default function DoctorProfile({ onBookAppointment }: DoctorProfileProps)
         <div className="mt-20 flex justify-center">
           <button
             onClick={onBookAppointment}
-            className="bg-[#0E7C7B] text-white px-10 py-4 rounded-full font-semibold text-base hover:bg-[#0B5F5E] transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+            className="bg-[#C8226E] text-white px-10 py-4 rounded-full font-semibold text-base hover:bg-[#9E1A56] transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
           >
             Book Your Consultation
           </button>
