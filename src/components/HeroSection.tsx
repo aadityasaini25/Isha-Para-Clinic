@@ -1,5 +1,6 @@
 'use client';
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Phone, ShieldCheck, Award, Zap, Activity } from "lucide-react";
 
@@ -73,7 +74,7 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
         className="md:flex md:items-center md:justify-center md:gap-16 md:mb-12 max-w-5xl mx-auto"
       >
         <div className="relative rounded-3xl aspect-[9/16] md:aspect-auto md:h-[520px] md:w-[300px] mx-auto md:mx-0 mb-8 md:mb-0 md:flex-initial overflow-hidden shadow-2xl ring-4 ring-white ring-offset-2 ring-offset-[#FBEFF4]">
-          {/* Branded hero poster — image-free composition built from layered gradients & SVG */}
+          {/* Branded hero portrait — doctor image inside a deep maroon stage */}
           <div className="relative w-full h-full bg-gradient-to-br from-[#2A0F22] via-[#9E1A56] to-[#6B0F3A] overflow-hidden">
             {/* Soft glow orbs */}
             <div aria-hidden className="absolute -top-24 -right-16 w-64 h-64 rounded-full bg-[#D4A95A]/25 blur-3xl" />
@@ -90,19 +91,37 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
               }}
             />
 
-            {/* Decorative orbital rings — center of the card */}
+            {/* Doctor portrait — main focal point */}
+            <div className="absolute inset-x-0 bottom-0 top-[88px] flex items-end justify-center">
+              <div className="relative w-[110%] h-[88%]">
+                {/* Soft radial halo behind portrait */}
+                <div
+                  aria-hidden
+                  className="absolute inset-0"
+                  style={{
+                    background:
+                      'radial-gradient(60% 50% at 50% 55%, rgba(235,201,127,0.32) 0%, rgba(200,34,110,0.12) 45%, rgba(0,0,0,0) 75%)',
+                  }}
+                />
+                <Image
+                  src="/images/doctor/dr. deepak.png"
+                  alt="Dr. Deepak Kumar — Senior Laser & Laparoscopic Surgeon"
+                  fill
+                  priority
+                  sizes="(min-width: 768px) 300px, 80vw"
+                  className="object-contain object-bottom drop-shadow-[0_18px_30px_rgba(0,0,0,0.45)]"
+                />
+              </div>
+            </div>
+
+            {/* Decorative ECG pulse line + corner accents */}
             <svg
               aria-hidden
               viewBox="0 0 300 520"
-              className="absolute inset-0 w-full h-full"
+              className="absolute inset-0 w-full h-full pointer-events-none"
               preserveAspectRatio="xMidYMid slice"
             >
               <defs>
-                <radialGradient id="heroOrbGlow" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" stopColor="#D4A95A" stopOpacity="0.55" />
-                  <stop offset="60%" stopColor="#C8226E" stopOpacity="0.18" />
-                  <stop offset="100%" stopColor="#C8226E" stopOpacity="0" />
-                </radialGradient>
                 <linearGradient id="heroPulseLine" x1="0" y1="0" x2="1" y2="0">
                   <stop offset="0%" stopColor="#D4A95A" stopOpacity="0" />
                   <stop offset="50%" stopColor="#EBC97F" stopOpacity="1" />
@@ -110,42 +129,14 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
                 </linearGradient>
               </defs>
 
-              {/* Concentric orbital rings around the center motif */}
-              <circle cx="150" cy="240" r="120" fill="none" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-              <circle cx="150" cy="240" r="90" fill="none" stroke="#ffffff" strokeOpacity="0.12" strokeWidth="1" />
-              <circle cx="150" cy="240" r="60" fill="none" stroke="#D4A95A" strokeOpacity="0.45" strokeWidth="1.2" strokeDasharray="3 5" />
-
-              {/* Center glow */}
-              <circle cx="150" cy="240" r="110" fill="url(#heroOrbGlow)" />
-
-              {/* Central laser / pulse symbol */}
-              <g transform="translate(150 240)">
-                {/* Medical cross within a soft ring */}
-                <circle r="34" fill="#ffffff" fillOpacity="0.08" stroke="#ffffff" strokeOpacity="0.25" strokeWidth="1" />
-                <rect x="-4" y="-18" width="8" height="36" rx="2" fill="#EBC97F" />
-                <rect x="-18" y="-4" width="36" height="8" rx="2" fill="#EBC97F" />
-                {/* Subtle pulsing dot */}
-                <circle r="4" fill="#fff">
-                  <animate attributeName="opacity" values="1;0.4;1" dur="2.4s" repeatCount="indefinite" />
-                </circle>
-              </g>
-
-              {/* Heartbeat ECG line — bottom third */}
+              {/* Heartbeat ECG line — sits just above the credential badge */}
               <path
-                d="M 0 380 L 60 380 L 80 380 L 95 350 L 110 410 L 125 360 L 140 400 L 160 380 L 300 380"
+                d="M 0 430 L 60 430 L 80 430 L 95 400 L 110 460 L 125 410 L 140 450 L 160 430 L 300 430"
                 fill="none"
                 stroke="url(#heroPulseLine)"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-              />
-              <path
-                d="M 0 380 L 60 380 L 80 380 L 95 350 L 110 410 L 125 360 L 140 400 L 160 380 L 300 380"
-                fill="none"
-                stroke="#EBC97F"
-                strokeOpacity="0.35"
-                strokeWidth="0.8"
-                strokeLinecap="round"
               />
 
               {/* Top corner accents */}
@@ -155,38 +146,17 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
               <path d="M 280 20 L 280 50" stroke="#D4A95A" strokeOpacity="0.7" strokeWidth="2" strokeLinecap="round" />
             </svg>
 
-            {/* Content layer */}
-            <div className="relative h-full w-full flex flex-col items-center text-center px-6 py-7 text-white">
-              {/* Brand eyebrow */}
+            {/* Top overlay — eyebrow + name */}
+            <div className="relative h-full w-full flex flex-col items-center text-center px-6 pt-6 text-white pointer-events-none">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-[10px] tracking-[0.18em] font-semibold text-[#EBC97F] uppercase">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#D4A95A] animate-pulse" />
                 Isha-Para Clinic
               </div>
-
-              {/* Top headline anchored under eyebrow */}
-              <div className="mt-4">
-                <p className="text-[11px] tracking-[0.25em] font-medium text-white/60 uppercase">Surgical Excellence</p>
-                <h3 className="mt-1 text-xl md:text-2xl font-bold leading-tight">
+              <div className="mt-3">
+                <h3 className="text-xl md:text-2xl font-bold leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.55)]">
                   Dr. Deepak Kumar
                 </h3>
                 <p className="text-[11px] text-[#EBC97F] font-semibold tracking-wider mt-0.5">MS · FIAGES · 25+ Yrs</p>
-              </div>
-
-              {/* Spacer pushes tagline to lower-middle, above the badge */}
-              <div className="flex-1" />
-
-              {/* Mid tagline (visible above center motif region) */}
-              <div className="mb-[88px]">
-                <p className="text-[10px] tracking-[0.3em] font-bold text-[#D4A95A] uppercase mb-2">Specializing In</p>
-                <h4 className="text-base md:text-lg font-bold leading-tight">
-                  Laser &amp; Laparoscopic<br />Surgery
-                </h4>
-                <div className="mx-auto mt-3 flex items-center justify-center gap-1.5">
-                  <span className="w-6 h-px bg-[#D4A95A]/60" />
-                  <span className="w-1 h-1 rounded-full bg-[#D4A95A]" />
-                  <span className="w-6 h-px bg-[#D4A95A]/60" />
-                </div>
-                <p className="mt-3 text-[11px] text-white/75 font-light">Pain-Free · Daycare · Stitch-Less</p>
               </div>
             </div>
           </div>
