@@ -1,6 +1,5 @@
 'use client';
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { Phone, ShieldCheck, Award, Zap, Activity } from "lucide-react";
 
@@ -91,27 +90,26 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
               }}
             />
 
-            {/* Doctor portrait — main focal point */}
-            <div className="absolute inset-x-0 bottom-0 top-[88px] flex items-end justify-center">
-              <div className="relative w-[110%] h-[88%]">
-                {/* Soft radial halo behind portrait */}
-                <div
-                  aria-hidden
-                  className="absolute inset-0"
-                  style={{
-                    background:
-                      'radial-gradient(60% 50% at 50% 55%, rgba(235,201,127,0.32) 0%, rgba(200,34,110,0.12) 45%, rgba(0,0,0,0) 75%)',
-                  }}
-                />
-                <Image
-                  src="/images/doctor/dr. deepak.png"
-                  alt="Dr. Deepak Kumar — Senior Laser & Laparoscopic Surgeon"
-                  fill
-                  priority
-                  sizes="(min-width: 768px) 300px, 80vw"
-                  className="object-contain object-bottom drop-shadow-[0_18px_30px_rgba(0,0,0,0.45)]"
-                />
-              </div>
+            {/* Hero video — main focal point */}
+            <div className="absolute inset-0">
+              <video
+                src="/videos/1.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="auto"
+                className="absolute inset-0 w-full h-full object-contain"
+              />
+              {/* Soft radial halo over video for branding warmth */}
+              <div
+                aria-hidden
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                  background:
+                    'radial-gradient(60% 50% at 50% 55%, rgba(235,201,127,0.18) 0%, rgba(200,34,110,0.08) 45%, rgba(0,0,0,0) 75%)',
+                }}
+              />
             </div>
 
             {/* Decorative ECG pulse line + corner accents */}
